@@ -39,12 +39,12 @@ func (m *Memory) OpLastAct(partnerID AgID) Act {
 
 // Возвращает МОЙ последний ход
 // Если это первый ход в истории то возвращает -1
-func (m *Memory) MyLastAct(partnerID AgID) (Act, bool) {
+func (m *Memory) MyLastAct(partnerID AgID) Act {
 	history, ok := m.History[partnerID]
 	if !ok || len(history) == 0 {
-		return NoAct, false
+		return NoAct
 	}
-	return history[len(history)-1].MyAct, true
+	return history[len(history)-1].MyAct
 }
 
 // Счетчик триггера для стратегий

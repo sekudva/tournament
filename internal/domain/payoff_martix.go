@@ -7,8 +7,10 @@ var PayoffMatrix = [3][3]int{
 	/* Take */ {+7, 0, -2},
 }
 
-func Payoff(my, their Act) (int, int) {
-	myPayoff := PayoffMatrix[my][their]
-	theirPayoff := PayoffMatrix[their][my]
-	return myPayoff, theirPayoff
+// my - мой ход, op (opponent) - ход противника
+// счетчик очков на один ход
+func Payoff(my, op Act) (int, int) {
+	myPayoff := PayoffMatrix[my][op]
+	opPayoff := PayoffMatrix[op][my]
+	return myPayoff, opPayoff
 }
