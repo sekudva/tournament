@@ -218,7 +218,7 @@ func updateCounters(counters map[domain.Act]int, actual domain.Act) {
 	}
 }
 
-// getBestResponse — оптимальный ответ на ожидаемый ход оппонента
+// getBestResponse — оптимальный ответ на ожидаемый ход оппонента.
 func getBestResponse(predicted domain.Act) domain.Act {
 	switch predicted {
 	case domain.Share:

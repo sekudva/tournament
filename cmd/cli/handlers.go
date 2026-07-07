@@ -142,7 +142,10 @@ func handleInfo() {
 }
 
 func Results(name string) {
-	fmt.Printf("\nResults in generated file: %s\n", name)
-	fmt.Print("WARNING: This file will override previous version\nif you run simulation with same Simulation Mode!\n")
+	fmt.Println("")
+	fmt.Println(strings.Repeat("=", 60))
+	fmt.Printf("Results in generated file: %s\n", name)
+	fmt.Println(strings.Repeat("=", 60))
+	fmt.Print("\nWARNING: This file will override previous version\nif you run simulation with same Simulation Mode!\n")
 	fmt.Print("If you want to save result, rename previous file.\n")
 }

@@ -2,7 +2,7 @@ package agents
 
 import (
 	"github.com/sekudva/strategika/internal/domain"
-	mod "github.com/sekudva/strategika/presets/mods"
+	"github.com/sekudva/strategika/presets/mod"
 	"github.com/sekudva/strategika/presets/strategies"
 )
 
